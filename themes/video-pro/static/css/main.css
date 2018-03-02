@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  background-color: #004B68;
+}
+.thoth{
+  text-align: center;
+  vertical-align: middle;
+  height: 100px;
+  width: 500px;
+    background-image: url("https://msp.c.yimg.jp/yjimage?q=ajEYYjcXyLGPr.vngV58xtRw20TsHl448Z.vchldqNgqxPOd.KWfKwoCeZ73YIdYciYaq8Xvr1_2E9ZHpDtA6YxJUv1fffbl.AJPpB.fOB7LxQWiAIiUWfPeWTINqMaV6LYh0nfqm25tJFmxoEdZ&sig=13absnv71&x=155&y=300");
+}
+.header{
+  height: 150px;
+  width: 100%;
+}
+.item {
+  margin: 5px;
+  color: #ffffff;
+}
