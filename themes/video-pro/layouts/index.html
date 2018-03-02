@@ -1,16 +1,32 @@
-<! DOCTYPE thml>
+<! DOCTYPE html>
 <html>
-<head>
-  <title>page Title</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./thoth.css">
+    <title>page Title</title>
+  </head>
+  <body>
+    <header>
+      <div class="thoth">テスト</div>
+      <div class="container">
+        <div class="item">TOP</div>
+        <div class="item">国語</div>
+        <div class="item">算数</div>
+        <div class="item" >理科</div>
+        <div class="item">社会</div>
+        <div class="item">体育</div>
+        <div class="item">美術</div>
+        <div class="item">音楽</div>
+        <div class="item">英語</div>
+        <div class="item">家庭科</div>
+      </div>
+    </header>
 
-<h1>{{ .Site.Title }}</h1>
-<ul>
-  {{ range .Data.Pages }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})
-  {{ end }}
-</ul>
+    <h1>{{ .Site.Title }}</h1>
+    <ul>
+      {{ range .Data.Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})
+      {{ end }}
+    </ul>
 
-</body>
+  </body>
 </html>
