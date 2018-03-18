@@ -5,9 +5,34 @@
 .thoth{
   text-align: center;
   vertical-align: middle;
-  height: 100px;
-  width: 500px;
-    background-image: url("https://msp.c.yimg.jp/yjimage?q=ajEYYjcXyLGPr.vngV58xtRw20TsHl448Z.vchldqNgqxPOd.KWfKwoCeZ73YIdYciYaq8Xvr1_2E9ZHpDtA6YxJUv1fffbl.AJPpB.fOB7LxQWiAIiUWfPeWTINqMaV6LYh0nfqm25tJFmxoEdZ&sig=13absnv71&x=155&y=300");
+  height: 350px;
+  width: 100%;
+  background-image: url("https://cdn.pixabay.com/photo/2016/10/13/16/40/green-1738220_1280.jpg");
+  background-repeat: no-repeat;
+
+  background-position: 0px -185px;
+}
+.title{
+  font-size: 100px;
+  color: #004B68;
+  padding-top: 70px;
+  font-family: Verdana;
+  font-weight: bold;
+
+}
+.mozi1{
+  margin-top: 30px;
+  margin-left: 45px;
+  float: left;
+  text-align: left;
+  font-size: 14px;
+}
+.mozi2{
+  margin-top: 30px;
+  margin-right: 45px;
+  float:right;
+  text-align: right;
+  font-size: 14px;
 }
 .header{
   height: 150px;
@@ -16,4 +41,96 @@
 .item {
   margin: 5px;
   color: #ffffff;
+}
+
+.body-container{
+  display: flex;
+}
+
+.movie{
+  margin: 80px;
+}
+
+.body-title{
+  margin-left: 80px;
+  font-size: 20px;
+}
+.body-text{
+  margin-left: 80px;
+}
+.body-tag{
+  text-align: right;
+  margin-right: 50px;
+}
+.line{
+  margin-left: 80px;
+
+}
+
+.more{
+  margin: auto;
+  text-align: center;
+  width: 200px;
+  height: 27px;
+  background-color: #FFDE59;
+}
+
+.side{
+    margin-left: 100px;
+    margin-right: 80px;
+
+}
+.side-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.side-movie-container{
+  display: flex;
+
+}
+.side-movie-title{
+  font-size: 13px;
+}
+
+.gift{
+  width: 260px;
+  height: 160px;
+  object-fit: contain;
+}
+
+
+.sns-container{
+  display: flex;
+}
+.sns-oya{
+  display: flex;
+  justify-content: flex-start;
+}
+.sns-item{
+  width: 50px;
+  height: 50px;
+  margin:5px;
+}
+
+.footer{
+  width: 100%;
+  height: 180px;
+  background-color: #004B68;
+}
+
+.footer-thoth{
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 20px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+.footer-mozi1{
+  margin-top:10px;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
 }

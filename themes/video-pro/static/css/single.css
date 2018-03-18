@@ -1,0 +1,218 @@
+
+.main-movie{
+  text-align: center;
+}
+
+.main-movie-title{
+  margin-left: 160px;
+  font-size: 24px;
+}
+.main-movie-text{
+  margin-left: 160px;
+}
+.main-movie-day{
+  text-align: right;
+}
+.main-movie-tag{
+  margin-right: 145px;
+}
+.sns-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.sns-oya{
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 145px;
+}
+.sns-item{
+  width: 50px;
+  height: 50px;
+  margin:5px;
+}
+
+.line{
+  margin: 110px;
+}
+
+
+
+
+.slide0{
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+#wrapper {
+overflow: hidden;
+width: 100%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/*slideshow*/
+
+#slideshow {
+position: relative;
+width: 100%;
+}
+.slideContents {
+position: relative;
+background: #ffffff;
+text-align: center;
+-webkit-user-select: none;
+user-select: none;
+}
+.slideContents,
+.slideContents section {
+width: 100%;
+height: auto;
+}
+.slideContents section {
+position: absolute;
+top: 0;
+left: 0;
+-webkit-transform: translateX(100%);
+transform: translateX(100%);
+-webkit-transition: opacity .6s, -webkit-transform .6s;
+transition: opacity .6s, transform .6s;
+}
+.slideContents section img {
+box-sizing: border-box;
+max-width: 100%;
+height: auto;
+padding: 0 50px;
+vertical-align: middle;
+}
+/* :::::: slideshow mechanism :::::: */
+#switch1:checked ~ #slideshow .slideContents #slide1,
+#switch2:checked ~ #slideshow .slideContents #slide2,
+#switch3:checked ~ #slideshow .slideContents #slide3,
+#switch4:checked ~ #slideshow .slideContents #slide4,
+#switch5:checked ~ #slideshow .slideContents #slide5 {
+z-index: 1;
+position: relative;
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+
+#switch1:checked ~ #slideshow .slideContents #slide1,
+#switch2:checked ~ #slideshow .slideContents #slide2,
+#switch3:checked ~ #slideshow .slideContents #slide3,
+#switch4:checked ~ #slideshow .slideContents #slide4,
+#switch5:checked ~ #slideshow .slideContents #slide5 {
+opacity: 1;
+}
+#switch1:checked ~ #slideshow .slideContents #slide4,
+#switch1:checked ~ #slideshow .slideContents #slide3,
+#switch2:checked ~ #slideshow .slideContents #slide1,
+#switch2:checked ~ #slideshow .slideContents #slide4,
+#switch3:checked ~ #slideshow .slideContents #slide2,
+#switch3:checked ~ #slideshow .slideContents #slide1,
+#switch4:checked ~ #slideshow .slideContents #slide3,
+#switch4:checked ~ #slideshow .slideContents #slide2{
+-webkit-transform: translateX(-100%);
+transform: ranslateX(-100%);
+}
+#switch1:checked ~ #slideshow .slideContents #slide3,
+#switch1:checked ~ #slideshow .slideContents #slide4,
+#switch2:checked ~ #slideshow .slideContents #slide4,
+#switch2:checked ~ #slideshow .slideContents #slide1,
+#switch3:checked ~ #slideshow .slideContents #slide1,
+#switch3:checked ~ #slideshow .slideContents #slide2,
+#switch4:checked ~ #slideshow .slideContents #slide2,
+#switch4:checked ~ #slideshow .slideContents #slide3,{
+transition-duration: 0s;
+}
+
+/* :::::: arrows :::::: */
+.arrow, .arrow label, .arrow .ico {
+position: absolute;
+}
+.arrow {
+top: 0;
+margin: 0;
+}
+.prev { left: 0; }
+.next { right: 0; }
+.arrow:hover {
+background: rgba(255,255,255,.7);
+}
+.arrow, .arrow label {
+cursor: pointer;
+width: 50px;
+height: 100%;
+}
+.arrow label {
+top: 0;
+left: 0;
+z-index: 1;
+}
+
+.arrow .ico {
+top: 40%;
+width: 15px;
+height: 15px;
+margin-top: -6px;
+border-top: 2px solid black;
+border-right: 2px solid black;
+opacity: 0.4;
+transition: right .6s, left .6s, opacity .6s;
+
+}
+.arrow:hover .ico {
+opacity: .6;
+transition-duration: .3s;
+}
+.prev .ico {
+left: 100%;
+-webkit-transform: rotate(-135deg);
+transform: rotate(-135deg);
+}
+.next .ico {
+right: 100%;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.prev:hover .ico { left: 90%; }
+.next:hover .ico { right: 90%; }
+
+/*circle*/
+.circle-container{
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.circle li{
+  text-align: center;
+  font-size: 12px;
+  opacity: .3;
+  -webkit-user-select: none;
+  user-select: none;
+  list-style: none;
+  display: inline-block;
+
+}
+.circle li:hover{
+  opacity: .5;
+}
+
+
+/* :::::: arrows mechanism :::::: */
+.arrow label {
+pointer-events: none;
+}
+#switch1:checked ~ #slideshow .prev label[for="switch4"],
+#switch2:checked ~ #slideshow .prev label[for="switch1"],
+#switch3:checked ~ #slideshow .prev label[for="switch2"],
+#switch4:checked ~ #slideshow .prev label[for="switch3"],
+#switch5:checked ~ #slideshow .prev label[for="switch4"],
+#switch1:checked ~ #slideshow .next label[for="switch2"],
+#switch2:checked ~ #slideshow .next label[for="switch3"],
+#switch3:checked ~ #slideshow .next label[for="switch4"],
+#switch4:checked ~ #slideshow .next label[for="switch1"],
+#switch5:checked ~ #slideshow .next label[for="switch1"]{
+pointer-events: auto;
+}
