@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="https://thoth-edu-media.com/css/main.css">
-    <title>page Title</title>
+    <title>{{ .Site.Title }}</title>
     <meta charset="utf-8">
   </head>
   <body>
@@ -16,7 +16,7 @@
         <div class="item">TOP</div>
         <div class="item">国語</div>
         <div class="item">算数</div>
-        <div class="item" >理科</div>
+        <div class="item">理科</div>
         <div class="item">社会</div>
         <div class="item">体育</div>
         <div class="item">美術</div>
@@ -28,61 +28,16 @@
     <br>
 
     <div class="body-container">
-      <div><br>
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/Arq7termMlo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">原宿に歩いていたリコーダーおじさん</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/Jpam8fVPZjo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">【神技】リコーダーでタイタニックを演奏してみた！ビックリするほどの音色。ひぐチーム</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/iGts955svO8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">葉加瀬さんが楽器屋さんで試し弾きをしたら店員さんびっくり！</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/HetA4oLaA-o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">神業！！　フランスで偶然出会った旅行客のピアノ二重奏が美しすぎる</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/OohpWix3GPg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">【ギター神業】１５歳少年のアコギに人々が驚愕！</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/d6BJixDUgjc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">小学生の千本桜対決がうますぎると話題に！【twitterで話題】【ストリートピアノ】</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/DFjIi2hxxf0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">トム･サム: 口で奏でるオーケストラ</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/8cJSo9lScKw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">銀座でサックスを吹く少女が、うますぎると話題に！！　 incredible girl sax player in Tokyo</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/MvofM_S64EI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">今までサックスに興味が無かった人もうっとりする演奏。。。。</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
-        <span class="movie"><iframe width="640" height="360" src="https://www.youtube.com/embed/kR0pwjigBGQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
-        <div class="body-title">ギターなんか誰でも弾ける教室〜所ジョージ</div>
-        <div class="body-tag">音楽</div>
-        <hr class="line"><br>
-
+      <div>
+        <br>
+        {{ range .Data.Pages }}
+        <span class="movie"><iframe width="640" height="360" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
+        <div class="body-title">{{ .Params.title }}</div>
+        <div class="body-tag">{{ .Params.category }}</div>
+          <hr class="line"><br>
+        {{ end }}
         <div class="more">もっと見る</div>
-
       </div>
-
 
       <div class="side">
         <div class="side-container">
@@ -138,19 +93,8 @@
     </div>
   </div>
 
-
-
-
 <br>
 <br><br><br><br>
-
-
-    <h1>{{ .Site.Title }}</h1>
-    <ul>
-      {{ range .Data.Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})
-      {{ end }}
-    </ul>
 
   </body>
 </html>
