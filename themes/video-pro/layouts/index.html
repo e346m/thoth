@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   {{ partial "head" . }}
+  <script type="text/javascript" src="../static/javascript/main.js"></script>
   <body>
     {{ partial "header" . }}
     <br>
@@ -9,12 +10,16 @@
       <div>
         <br>
         {{ range .Data.Pages }}
+        <div class="movie-container">
         <span class="movie"><iframe width="640" height="360" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
         <div class="body-title">{{ .Params.title }}</div>
         <div class="body-tag">{{ .Params.category }}</div>
           <hr class="line"><br>
+        </div>
         {{ end }}
-        <div class="more">もっと見る</div>
+
+
+        <div class="more" onclick="displayMovieContainer()">もっと見る</div>
       </div>
 
       <div class="side">
