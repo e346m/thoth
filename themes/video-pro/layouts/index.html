@@ -1,30 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="https://thoth-edu-media.com/css/main.css">
-    <title>{{ .Site.Title }}</title>
-    <meta charset="utf-8">
-  </head>
+  {{ partial "head" . }}
   <body>
-    <header>
-      <div class="thoth">
-        <div class="mozi1">教育系動画まとめ</div>
-        <div class="mozi2">保護者の方へ</div>
-        <div class="title">Thoth</div>
-      </div>
-      <div class="container">
-        <div class="item">TOP</div>
-        <div class="item">国語</div>
-        <div class="item">算数</div>
-        <div class="item">理科</div>
-        <div class="item">社会</div>
-        <div class="item">体育</div>
-        <div class="item">美術</div>
-        <div class="item">音楽</div>
-        <div class="item">英語</div>
-        <div class="item">家庭科</div>
-      </div>
-    </header>
+    {{ partial "header" . }}
     <br>
 
     <div class="body-container">
@@ -86,15 +64,6 @@
         </div>
       </div>
     </div><br><br>
-
-    <div class="footer">
-     <div class="footer-thoth">Thoth</div>
-     <div class="footer-mozi1">お問い合わせ<br><a href="mailto:thoth.edu.media@gmail.com" style="color:#ffffff;">thoth.edu.media@gmail.com</a></div>
-    </div>
-  </div>
-
-<br>
-<br><br><br><br>
-
+    {{ partial "footer" . }}
   </body>
 </html>
