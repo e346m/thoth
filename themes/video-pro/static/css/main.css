@@ -1,3 +1,10 @@
+.movie-container{
+display: none;
+}
+.movie-show-container{
+display: block;
+}
+
 .container {
   display: flex;
   background-color: #004B68;
