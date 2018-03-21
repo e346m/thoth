@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-
-    <title>page Title</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../../static/css/single.css">
-  </head>
+  {{ partial "head" . }}
   <body>
+    {{ partial "header" . }}
+    <br>
     <div class="main-movie">
       <iframe width="960" height="540" src="https://www.youtube.com/embed/HetA4oLaA-o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
       <div class="main-movie-title">神業！！　フランスで偶然出会った旅行客のピアノ二重奏が美しすぎる</div><br>
@@ -61,8 +58,6 @@
                  <iframe width="288" height="162" src="https://www.youtube.com/embed/Jpam8fVPZjo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
               </section>
-
-
             </div>
             <p class="arrow prev">
               <i class="ico"></i>
@@ -70,7 +65,6 @@
               <label for="switch2"></label>
               <label for="switch3"></label>
               <label for="switch4"></label>
-
             </p>
             <p class="arrow next">
               <i class="ico"></i>
@@ -78,7 +72,6 @@
               <label for="switch2"></label>
               <label for="switch3"></label>
               <label for="switch4"></label>
-
             </p>
 
 
@@ -88,17 +81,11 @@
                 <li><label for="switch2">●</label></li>
                 <li><label for="switch3">●</label></li>
                 <li><label for="switch4">●</label></li>
-
               </ul>
-          </div>
+            </div>
         </div>
+      </div>
     </div>
-  </div>
-
+    {{ partial "footer" . }}
   </body>
-
-
-
-
-
 </html>
