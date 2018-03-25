@@ -10,22 +10,26 @@
   {{ partial "header" . }}
     <br>
 
-    <span class="category-mozi">カテゴリー：音楽</span>
+    <span class="category-mozi">{{ .Params.title }}</span>
     <hr class="line">
     {{ range $i, $v := .Data.Pages }}
       {{ if (lt $i 9) }}
+        {{ if and (mod $i 3 | eq 0) (ne $i 0)}}
+          </div>
+        {{ end }}
         {{ if (mod $i 3 | eq 0) }}
             <div class="movie-container">
         {{ end }}
             <div class="movie"><iframe width="288" height="162" src={{ .Params.videoUrl }}  frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe>
               <div class="movie-title">{{ .Params.title }}</div>
             </div>
-        {{ if (mod $i 3 | eq 0) }}
-            </div>
-        {{ end }}
       {{end}}
 
-      {{ if (gt $i 10) }}
+      {{ if (gt $i 8) }}
+        {{ if and (mod $i 3 | eq 0) (ne $i 8) }}
+            </div>
+          </div>
+        {{ end }}
         {{ if (mod $i 3 | eq 0) }}
           <div class="movie-none-container">
             <div class="movie-container" class="movie-show-container">
@@ -33,12 +37,10 @@
               <div class="movie"><iframe width="288" height="162" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe>
                 <div class="movie-title">{{ .Params.title }}</div>
               </div>
-        {{ if (mod $i 3 | eq 0) }}
-            </div>
-          </div>
-        {{ end }}
       {{ end }}
     {{ end }}
+       </div>
+     </div>
 
     <br><br>
     <div class="more" onclick="displayMovieContainer()">もっと見る</div><br><br>
