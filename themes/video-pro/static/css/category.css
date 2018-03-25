@@ -1,0 +1,54 @@
+.category-mozi{
+  margin-left: 175px;
+}
+
+.line{
+ text-align: center;
+ width: 80%;
+}
+.movie-container{
+  display: flex;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+.movie{
+  justify-content: justify;
+  margin: 15px 15px 0px 15px;
+}
+.movie-title{
+  text-overflow: clip ellipsis;
+}
+.more{
+  -webkit-user-select: none;
+  user-select: none;
+  margin: auto;
+  text-align: center;
+
+  width: 200px;
+  height: 27px;
+  background-color: #FFDE59;
+}
+.movie-none-container{
+display: none;
+}
+.movie-show-container{
+  display: block;
+}
+
+.gift-ly{
+  max-width: 50%;
+  margin: 0 auto;
+}
+.gift{
+width: 600px;
+height: 100px;
+object-fit: cover;
+border: 0.9px solid #D6D3D3;
+
+}
+.giftpage{
+  color: #979797;
+  position: relative;
+  top: 32px;
+  left: 10px;
+}
