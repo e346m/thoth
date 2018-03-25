@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ partial "common-head" . }}
+    <link rel="stylesheet" type="text/css" href="https://thoth-edu-media.com/css/category.css">
+    <script type="text/javascript" src="https://thoth-edu-media.com/javascript/category.js"></script>
+  </head>
+
+  <body>
+  {{ partial "header" . }}
+    <br>
+
+    <span class="category-mozi">{{ .Params.title }}</span>
+    <hr class="line">
+    {{ range $i, $v := .Data.Pages }}
+      {{ if (lt $i 9) }}
+        {{ if and (mod $i 3 | eq 0) (ne $i 0)}}
+          </div>
+        {{ end }}
+        {{ if (mod $i 3 | eq 0) }}
+            <div class="movie-container">
+        {{ end }}
+            <div class="movie"><iframe width="288" height="162" src={{ .Params.videoUrl }}  frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe>
+              <div class="movie-title">{{ .Params.title }}</div>
+            </div>
+      {{end}}
+
+      {{ if (gt $i 8) }}
+        {{ if and (mod $i 3 | eq 0) (ne $i 8) }}
+            </div>
+          </div>
+        {{ end }}
+        {{ if (mod $i 3 | eq 0) }}
+          <div class="movie-none-container">
+            <div class="movie-container" class="movie-show-container">
+        {{ end }}
+              <div class="movie"><iframe width="288" height="162" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe>
+                <div class="movie-title">{{ .Params.title }}</div>
+              </div>
+      {{ end }}
+    {{ end }}
+       </div>
+     </div>
+
+    <br><br>
+    <div class="more" onclick="displayMovieContainer()">もっと見る</div><br><br>
+    <hr class="line">
+
+    <div class="gift-ly">
+      <div class="giftpage">Giftページ</div>
+      <a href="">
+        <img src="https://www.pakutaso.com/shared/img/thumb/PPH_foryoupr_TP_V.jpg" altt="giftpage" class="gift">
+      </a><br>
+    </div>
+    {{ partial "footer" . }}
+  </body>
+</html>

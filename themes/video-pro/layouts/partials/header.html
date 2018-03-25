@@ -5,15 +5,8 @@
     <div class="title">Thoth</div>
   </div>
   <div class="container">
-    <div class="item">TOP</div>
-    <div class="item">国語</div>
-    <div class="item">算数</div>
-    <div class="item">理科</div>
-    <div class="item">社会</div>
-    <div class="item">体育</div>
-    <div class="item">美術</div>
-    <div class="item">音楽</div>
-    <div class="item">英語</div>
-    <div class="item">家庭科</div>
+    {{ range $key, $value := .Site.Taxonomies.categories }}
+    <div  class="item"><a href="/categories/{{ $key | urlize }}"  class="item">{{ $key }}</a></div>
+    {{ end }}
   </div>
 </header>
