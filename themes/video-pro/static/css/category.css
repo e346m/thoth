@@ -14,9 +14,19 @@
 .movie{
   justify-content: justify;
   margin: 15px 15px 0px 15px;
+  position: relative;
 }
 .movie-title{
   text-overflow: clip ellipsis;
+}
+.squ{
+  width: 290px;
+  height: 165px;
+  z-index: 1;
+  background-color: #ffffff;
+  opacity: 0.0;
+  position: absolute;
+  bottom: 52px;
 }
 .more{
   -webkit-user-select: none;
