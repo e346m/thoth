@@ -3,3 +3,7 @@ languageCode = "ja-JP"
 title = "Thoth"
 theme = "video-pro"
 googleAnalytics = "UA-116073999-1"
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
