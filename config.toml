@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://thoth-edu-media/"
 languageCode = "ja-JP"
 title = "Thoth"
 theme = "video-pro"
