@@ -2,6 +2,11 @@
 <html>
   <head>
   {{ partial "common-head" . }}
+  <title>{{ .Site.Title }}</title>
+  <meta charset="utf-8">
+  {{ template "_internal/google_analytics.html" . }}
+  <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+
 
   <script type="text/javascript" src="https://thoth-edu-media.com/javascript/main.js"></script>
   <div id="fb-root"></div>
@@ -28,7 +33,9 @@ fjs.parentNode.insertBefore(js, fjs);
         {{ range $i, $v := .Data.Pages }}
           {{ if (lt $i 5) }}
             <div class="movie-show-container">
-            <span class="movie"><iframe width="640" height="360" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
+            <span class="movie">
+              <a href=""><div class="squ"></div></a>
+              <iframe width="640" height="360" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
             <div class="body-title">{{ .Params.title }}</div>
             {{ range .Params.categories }}
               <div class="body-tag">{{ . }}</div>
@@ -38,7 +45,9 @@ fjs.parentNode.insertBefore(js, fjs);
           {{ end }}
           {{ if (gt $i 6) }}
             <div class="movie-container">
-            <span class="movie"><iframe width="640" height="360" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
+            <span class="movie">
+              <a href=""><div class="squ"></div></a>
+              <iframe width="640" height="360" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
             <div class="body-title">{{ .Params.title }}</div>
             {{ range .Params.categories }}
               <div class="body-tag">{{ . }}</div>
@@ -56,23 +65,34 @@ fjs.parentNode.insertBefore(js, fjs);
         <div class="side-container">
           <div class="sideitem">おすすめ動画<br>
             <div class="side-movie-container">
-              <div class="side-movie"><iframe width="150" height="85" src="https://www.youtube.com/embed/HetA4oLaA-o" frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe></div>
+              <div class="side-movie">
+                <a href=""><div class="squ2"></div></a>
+                <iframe width="150" height="85" src="https://www.youtube.com/embed/HetA4oLaA-o" frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe></div>
               <div class="side-movie-title">神業！！　フランスで偶然出会った旅行客のピアノ二重奏が美しすぎる</div>
             </div>
+
             <div class="side-movie-container">
-              <div class="side-movie"><iframe width="150" height="85" src="https://www.youtube.com/embed/DFjIi2hxxf0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+              <div class="side-movie">
+                <a href=""><div class="squ2"></div></a>
+                <iframe width="150" height="85" src="https://www.youtube.com/embed/DFjIi2hxxf0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
               <div class="side-movie-title">トム･サム: 口で奏でるオーケストラ</div>
             </div>
             <div class="side-movie-container">
-              <div class="side-movie"><iframe width="150" height="85" src="https://www.youtube.com/embed/8cJSo9lScKw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+              <div class="side-movie">
+                <a href=""><div class="squ2"></div></a>
+                <iframe width="150" height="85" src="https://www.youtube.com/embed/8cJSo9lScKw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
               <div class="side-movie-title">銀座でサックスを吹く少女が、うますぎると話題に！！　 incredible girl sax player in Tokyo</div>
             </div>
             <div class="side-movie-container">
-              <div class="side-movie"><iframe width="150" height="85" src="https://www.youtube.com/embed/MvofM_S64EI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+              <div class="side-movie">
+                <a href=""><div class="squ2"></div></a>
+                <iframe width="150" height="85" src="https://www.youtube.com/embed/MvofM_S64EI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
               <div class="side-movie-title">今までサックスに興味が無かった人もうっとりする演奏。。。。</div>
             </div>
             <div class="side-movie-container">
-              <div class="side-movie"><iframe width="150" height="85" src="https://www.youtube.com/embed/kR0pwjigBGQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+              <div class="side-movie">
+                <a href=""><div class="squ2"></div></a>
+                <iframe width="150" height="85" src="https://www.youtube.com/embed/kR0pwjigBGQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
               <div class="side-movie-title">ギターなんか誰でも弾ける教室〜所ジョージ</div>
             </div>
 

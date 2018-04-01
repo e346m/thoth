@@ -56,6 +56,7 @@ display: block;
 
 .movie{
   margin: 80px;
+  position: relative;
 }
 
 .body-title{
@@ -71,8 +72,29 @@ display: block;
 }
 .line{
   margin-left: 80px;
-
 }
+_::-webkit-full-page-media, _:future, :root .squ {
+  margin: 0px;
+  width: 640px;
+  height: 362px;
+  z-index: 1;
+  background-color: #ffffff;
+  opacity: 0.0;
+  position: absolute;
+  bottom: 0px;
+}
+
+.squ{
+margin: 80px;
+width: 640px;
+height: 362px;
+z-index: 1;
+background-color: #ffffff;
+opacity: 0.0;
+position: absolute;
+bottom: -80px;
+}
+
 
 .more{
   margin: auto;
@@ -99,6 +121,18 @@ display: block;
 }
 .side-movie-title{
   font-size: 13px;
+}
+.side-movie{
+  position: relative;
+}
+.squ2{
+
+  width: 150px;
+  height: 85px;
+  z-index: 1;
+  background-color: #ffffff;
+  opacity: 0.0;
+  position: absolute;
 }
 
 .gift{
