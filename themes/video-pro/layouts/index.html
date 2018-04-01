@@ -26,7 +26,7 @@
           {{ if (lt $i 5) }}
             <div class="movie-show-container">
             <span class="movie">
-              <a href=""><div class="squ"></div></a>
+              <a href={{ .RelPermalink }}><div class="squ"></div></a>
               <iframe width="640" height="360" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
             <div class="body-title">{{ .Params.title }}</div>
             {{ range .Params.categories }}
@@ -38,7 +38,7 @@
           {{ if (gt $i 6) }}
             <div class="movie-container">
             <span class="movie">
-              <a href=""><div class="squ"></div></a>
+              <a href={{ .RelPermalink }}>><div class="squ"></div></a>
               <iframe width="640" height="360" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
             <div class="body-title">{{ .Params.title }}</div>
             {{ range .Params.categories }}
