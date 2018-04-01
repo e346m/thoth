@@ -8,10 +8,15 @@
     {{ partial "header" . }}
     <br>
     <div class="main-movie">
-      <iframe width="960" height="540" src="https://www.youtube.com/embed/HetA4oLaA-o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-      <div class="main-movie-title">神業！！　フランスで偶然出会った旅行客のピアノ二重奏が美しすぎる</div><br>
-      <div class="main-movie-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
-      <div class="main-movie-day">○日前<span class="main-movie-tag">　　音楽</span></div>
+      <iframe width="960" height="540" src={{ .Params.videoUrl }}  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+      <div class="main-movie-title">{{ .Params.title }}</div><br>
+      <div class="main-movie-text">{{ .Params.description }}</div>
+      <div class="main-movie-day">
+        {{ .Date.Format "Monday, Jan 2, 2006" }}
+        {{ range .Params.categories }}
+          <span class="main-movie-tag">{{ . }}</span>
+        {{ end }}
+      </div>
       <div class="main-movie-sns">
         <div class="sns-container"><br>
           <div class="sns-oya">
