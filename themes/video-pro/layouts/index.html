@@ -2,12 +2,25 @@
 <html>
   <head>
   {{ partial "common-head" . }}
+
   <script type="text/javascript" src="https://thoth-edu-media.com/javascript/main.js"></script>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
   </head>
 
   <body>
     {{ partial "header" . }}
+
     <br>
+
+
 
     <div class="body-container">
       <div>
@@ -74,9 +87,14 @@
             <div>SNSシェア</div>
               <div class="sns-container"><br>
                 <div class="sns-oya">
-                  <a href=""><img src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/twitter-128.png" alt="twitter" class="sns-item"></a>
-                  <a href=""><img src="https://ja.facebookbrand.com/wp-content/uploads/2016/05/FB-fLogo-Blue-broadcast-2.png" alt="facebook"class="sns-item"></a>
-                  <a href=""><img src="http://www.marksign.net/wp-content/uploads/2016/07/instagram.jpg" alt="instagram"class="sns-item"></a>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a class="twitter btn" href="http://twitter.com/share?url={{ .Site.Title }}&text={{ .Site.description }}" target="_blank"><img src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/twitter-128.png" alt="twitter" class="sns-item"></a>
+
+                    <div class="fb-share-button" data-href="https://thoth-edu-media.com" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthoth-edu-media.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><img src="https://ja.facebookbrand.com/wp-content/uploads/2016/05/FB-fLogo-Blue-broadcast-2.png" alt="facebook"class="sns-item"></a>
+                    </div>
+
+                  </div>
+
                 </div>
         　    </div><br>
 
