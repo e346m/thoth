@@ -12,12 +12,12 @@ display: block;
 .thoth{
   text-align: center;
   vertical-align: middle;
-  height: 350px;
+  height: 400px;
   width: 100%;
-  background-image: url("https://thoth-edu-media.com/img/pexels-photo.jpeg");
+  background-image: url("https://s3-ap-northeast-1.amazonaws.com/thoth-edu-media/img/pexels-photo.jpeg");
   background-repeat: no-repeat;
-
-  background-position: 0px -185px;
+  background-position: bottom;
+  background-size: cover;
 }
 .title{
   font-size: 100px;
