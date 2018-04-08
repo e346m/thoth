@@ -10,6 +10,11 @@
   display: flex;
   margin-left: 160px;
   margin-right: 160px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 .movie{
   justify-content: justify;
@@ -27,6 +32,16 @@
   opacity: 0.0;
   position: absolute;
   bottom: 52px;
+  @media screen and (min-width: 768px){
+      width: 290px;
+      height: 165px;
+      z-index: 1;
+      background-color: #ffffff;
+      opacity: 0.0;
+      position: absolute;
+      bottom: 0px;
+      margin-left: 0px;
+  }
 }
 .more{
   -webkit-user-select: none;
@@ -48,6 +63,10 @@ display: none;
 .gift-ly{
   max-width: 50%;
   margin: 0 auto;
+  @media screen and (min-width: 768px){
+  margin-left: 160px;
+  max-width: 50%;
+  }
 }
 .gift{
 width: 600px;
