@@ -51,7 +51,7 @@ display: block;
 }
 
 .body-container{
-  display: flex;
+  margin-left: 150px;
 }
 
 .movie{
@@ -70,9 +70,7 @@ display: block;
   text-align: right;
   margin-right: 50px;
 }
-.line{
-  margin-left: 80px;
-}
+
 _::-webkit-full-page-media, _:future, :root .squ {
   margin: 0px;
   width: 640px;
@@ -86,8 +84,8 @@ _::-webkit-full-page-media, _:future, :root .squ {
 
 .squ{
 margin: 80px;
-width: 640px;
-height: 362px;
+width: 810px;
+height: 460px;
 z-index: 1;
 background-color: #ffffff;
 opacity: 0.0;
@@ -95,59 +93,48 @@ position: absolute;
 bottom: -80px;
 }
 
-
+.line{
+  margin-right: 150px;
+}
 .more{
-  margin: auto;
+  margin-left: 385px;
   text-align: center;
   width: 200px;
   height: 27px;
   background-color: #FFDE59;
 }
 
-.side{
-    margin-left: 100px;
-    margin-right: 80px;
+.gift-ly{
+  max-width: 50%;
 
 }
-.side-container{
-  display: flex;
-  flex-direction: column;
-
-}
-
-.side-movie-container{
-  display: flex;
-
-}
-.side-movie-title{
-  font-size: 13px;
-}
-.side-movie{
-  position: relative;
-}
-.squ2{
-
-  width: 150px;
-  height: 85px;
-  z-index: 1;
-  background-color: #ffffff;
-  opacity: 0.0;
-  position: absolute;
-}
-
 .gift{
-  width: 260px;
-  height: 160px;
-  object-fit: contain;
+width: 600px;
+height: 100px;
+object-fit: cover;
+border: 0.9px solid #D6D3D3;
+margin-left: 320px;
+
+}
+.giftpage{
+  color: #979797;
+  position: relative;
+  top: 32px;
+  left: 10px;
+  margin-left: 330px;
 }
 
 
+.sns{
+  text-align: center;
+}
 .sns-container{
   display: flex;
+  justify-content: center;
 }
 .sns-oya{
   display: flex;
-  justify-content: flex-start;
+
 }
 .sns-item{
   width: 50px;
@@ -174,4 +161,30 @@ bottom: -80px;
   font-size: 12px;
   color: #ffffff;
   text-align: center;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .body-container{
+    margin-left: 0px;
+  }
+  .gift{
+  width: 600px;
+  height: 100px;
+  object-fit: cover;
+  border: 0.9px solid #D6D3D3;
+  margin-left: 160px;
+  }
+  .giftpage{
+    color: #979797;
+    position: relative;
+    top: 32px;
+    left: 10px;
+    margin-left: 170px;
+  }
+  .line{
+    margin-right: auto;
+  }
+
 }
