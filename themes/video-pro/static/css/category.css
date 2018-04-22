@@ -10,11 +10,6 @@
   display: flex;
   margin-left: 160px;
   margin-right: 160px;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
 }
 .movie{
   justify-content: justify;
@@ -24,6 +19,7 @@
 .movie-title{
   text-overflow: clip ellipsis;
 }
+
 .squ{
   width: 290px;
   height: 165px;
@@ -31,24 +27,14 @@
   background-color: #ffffff;
   opacity: 0.0;
   position: absolute;
-  bottom: 52px;
-  @media screen and (min-width: 768px){
-      width: 290px;
-      height: 165px;
-      z-index: 1;
-      background-color: #ffffff;
-      opacity: 0.0;
-      position: absolute;
-      bottom: 0px;
-      margin-left: 0px;
-  }
+  bottom: 0px;
+  margin-left: 0px;
 }
 .more{
   -webkit-user-select: none;
   user-select: none;
   margin: auto;
   text-align: center;
-
   width: 200px;
   height: 27px;
   background-color: #FFDE59;
@@ -63,16 +49,13 @@ display: none;
 .gift-ly{
   max-width: 50%;
   margin: 0 auto;
-  @media screen and (min-width: 768px){
-  margin-left: 160px;
-  max-width: 50%;
-  }
 }
 .gift{
 width: 600px;
 height: 100px;
 object-fit: cover;
 border: 0.9px solid #D6D3D3;
+margin-left: 0px;
 
 }
 .giftpage{
@@ -80,4 +63,24 @@ border: 0.9px solid #D6D3D3;
   position: relative;
   top: 32px;
   left: 10px;
+  margin-left: 0px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1024px){
+  .movie-container{
+      display: flex;
+      margin-left: 10px;
+      margin-right: 10px;}
+  .squ{
+      width: 290px;
+      height: 165px;
+      z-index: 1;
+      background-color: #ffffff;
+      opacity: 0.0;
+      position: absolute;
+      bottom: 0px;
+      margin-left: 0px;}
+  .gift-ly{
+      margin-left: 160px;
+      max-width: 50%;}
 }
