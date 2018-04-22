@@ -4,3 +4,12 @@
   <link rel="icon" type="image/gif/png" href="https://s3-ap-northeast-1.amazonaws.com/thoth-edu-media/img/Thoth.png">
   {{ template "_internal/google_analytics.html" . }}
   <link rel="stylesheet" type="text/css" href="https://s3-ap-northeast-1.amazonaws.com/thoth-edu-media/css/main.css">
+  <script type="text/javascript" src="https://s3-ap-northeast-1.amazonaws.com/thoth-edu-media/javascript/echo.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      echo.init({
+        offset: 50,
+        throttle: 0,
+      });
+    });
+  </script>

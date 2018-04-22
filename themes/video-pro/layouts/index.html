@@ -26,8 +26,6 @@
 
   <body>
     {{ partial "header" . }}
-  
-
       <div class="body-container">
         <div><br>
         {{ range $i, $v := .Data.Pages }}
@@ -35,7 +33,7 @@
           <div class="movie-show-container">
             <span class="movie">
               <a href={{ .RelPermalink }}><div class="squ"></div></a>
-              <iframe width="800" height="450" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
+              <iframe width="800" height="450" data-echo={{ .Params.videoUrl }} frameborder="0" allow="encrypted-media" allowfullscreen></iframe></span><br>
             <div class="body-title">{{ .Params.title }}</div>
             {{ range .Params.categories }}
               <div class="body-tag">{{ . }}</div>
@@ -47,13 +45,14 @@
             <div class="movie-container">
               <span class="movie">
               <a href={{ .RelPermalink }}><div class="squ"></div></a>
-              <iframe width="800" height="450" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span><br>
+              <iframe width="800" height="450" data-echo={{ .Params.videoUrl }} frameborder="0" allow="encrypted-media" allowfullscreen></iframe></span><br>
               <div class="body-title">{{ .Params.title }}</div>
             {{ range .Params.categories }}
               <div class="body-tag">{{ . }}</div>
             {{ end }}
             <hr class="line" ><br>
             </div>
+
           {{ end }}
         {{ end }}
         <br>
@@ -68,6 +67,14 @@
               <img src="https://www.pakutaso.com/shared/img/thumb/PPH_foryoupr_TP_V.jpg" altt="giftpage" class="gift">
             </a><br>
         </div><br><br>
+
+        <script type="text/javascript" src="/javascript/echo.js"></script>
+        <script type="text/javascript">
+          echo.init({
+            offset: 50,
+            throttle: 0,
+          });
+        </script>
 
 
 
