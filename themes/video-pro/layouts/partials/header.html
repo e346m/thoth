@@ -1,8 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+  </head>
+
 <header>
   <div class="thoth">
     <div class="mozi1">教育系動画まとめ</div>
     <div class="mozi2">保護者の方へ</div>
-    <div class="title">Thoth</div>
+    <div class="title"><a href="https://thoth-edu-media.com/">Thoth</a></div>
   </div>
   <div class="container">
     {{ range $key, $value := .Site.Taxonomies.categories }}
@@ -10,3 +16,5 @@
     {{ end }}
   </div>
 </header>
+
+</html>
