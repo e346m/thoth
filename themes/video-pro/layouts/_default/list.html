@@ -31,7 +31,9 @@
         {{ end }}
             <div class="movie"><iframe width="288" height="162" src={{ .Params.videoUrl }}  frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe>
               <div class="movie-title">{{ .Params.title }}</div>
-              <a href={{ .RelPermalink }}><div class="squ"></div></a>
+              <a href={{ .RelPermalink }}>
+                <div class="squ-category"></div>
+              </a>
             </div>
       {{end}}
 
@@ -46,7 +48,7 @@
         {{ end }}
               <div class="movie"><iframe width="288" height="162" src={{ .Params.videoUrl }} frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe>
                 <div class="movie-title">{{ .Params.title }}</div>
-                <a href={{ .RelPermalink }}><div class="squ"></div></a>
+                <a href={{ .RelPermalink }}><div class="squ-category"></div></a>
               </div>
       {{ end }}
     {{ end }}
