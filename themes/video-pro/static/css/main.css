@@ -1,204 +1,273 @@
 
 
-.movie-container{
-display: none;
-}
-.movie-show-container{
-display: block;
-}
-
-.container {
-  display: flex;
-  background-color: #004B68;
-}
 body{
-  margin: 0px;
+  margin: 0;
 }
-.thoth{
-  text-align: center;
-  vertical-align: middle;
-  height: 400px;
-  width: 100%;
-  background-image: url("https://s3-ap-northeast-1.amazonaws.com/thoth-edu-media/img/pexels-photo.jpeg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
+
+.thothlogo{
+  width: 80%;
+  height: auto;
 
 }
-.title{
-  font-size: 100px;
-  color: #004B68;
-  padding-top: 70px;
-  font-family: Verdana;
-  font-weight: bold;
+
+a {
+ weight: 100px;
 }
-a{
-  text-decoration: none;
-  color: #004B68;
+
+
+.container-header{
+  height: 110px;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 60px;
+  background-color: rgba( 255, 255, 255, 0.9);
 }
-.mozi1{
-  margin-top: 30px;
-  margin-left: 45px;
-  float: left;
-  text-align: left;
-  font-size: 14px;
+.container-category{
+  display: flex;
+  margin-right: 30%;
+
+
+
 }
-.mozi2{
-  margin-top: 30px;
-  margin-right: 45px;
-  float:right;
-  text-align: right;
-  font-size: 14px;
-}
-.header{
-  height: 150px;
-  width: 100%;
-}
-.item {
-  margin: 5px;
+
+.category-rectangle{
+  width: 65px;
+  height: 57px;
+  border-radius: 8px;
+  margin: 3px;
+  text-align: center;
+  line-height: 55px;
+
   color: #ffffff;
+
 }
 
-.body-container{
-  margin-left: 150px;
+
+.category-rectangle a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
-.movie{
-  margin: 80px;
-  position: relative;
+.white, .white:hover, .white:visited, .white:link, .white:active {
+color: #FFFFFF;
+}
+.black, .black:hover, .black:visited, .black:link, .black:active {
+color: #000000;
 }
 
-.body-title{
-  margin-left: 80px;
-  font-size: 20px;
-}
-.body-text{
-  margin-left: 80px;
-}
-.body-tag{
-  text-align: right;
-  margin-right: 200px;
-}
 
-_::-webkit-full-page-media, _:future, :root .squ {
-  margin: 0px;
-  width: 640px;
-  height: 362px;
-  z-index: 1;
-  background-color: #ffffff;
-  opacity: 0.0;
-  position: absolute;
-  bottom: 0px;
 }
+.posi{
+  vertical-align: middle;
 
-.squ{
-margin: 80px;
-width: 810px;
-height: 460px;
-z-index: 1;
-background-color: #ffffff;
-opacity: 0.0;
-position: absolute;
-bottom: -80px;
 }
+.kokugo{
+  background: #FA4141;
 
-.line{
-  margin-right: 150px;
 }
-.more{
-  margin-left: 385px;
-  text-align: center;
-  width: 200px;
-  height: 27px;
-  background-color: #FFDE59;
+.sansu{
+  background: #3E7FFB;
 }
-
-.gift-ly{
-  max-width: 50%;
-
+.rika{
+  background: #33AC21;
+}
+.shakai{
+  background: #F7B322;
+}
+.taiiku{
+  background: #534CD4;
+}
+.bizyutu{
+  background: #FF5E74;
+}
+.onngaku{
+  background: #C86EFF;
 }
 .gift{
-width: 600px;
-height: 100px;
-object-fit: cover;
-border: 0.9px solid #D6D3D3;
-margin-left: 320px;
-
-}
-.giftpage{
-  color: #979797;
-  position: relative;
-  top: 32px;
-  left: 10px;
-  margin-left: 330px;
+  background: #FFF35D;
+  color: #000000;
 }
 
 
-.sns{
+
+.hogosya{
+  float: right;
+  margin-right: 50px;
+  font-size: 14px;
+
+}
+
+.item {
+  padding: 10px;
+  border-radius: 8px;
+
+}
+
+.movie-container{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 0.9fr 0.6fr 1fr 1.5fr;
+  grid-template-rows: 170px 85px 85px 180px 170px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: -5px;
+}
+
+.box-1{
+  grid-column: 1 / 3;
+  grid-row: 1 / 4;
+  background: #FA4141;
+}
+.box-2{
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  background: #33AC21;
+}
+.box-3{
+  grid-row: 1 / 3;
+  background: #C86EFF;
+}
+.box-4{
+  grid-row: 2 /4;
+  background: #FF5E74;
+}
+.box-5{
+  grid-row: 3 / 5;
+  background: #F7B322;
+}
+.box-6{
+  background: #3E7FFB;
+}
+.box-7{
+  grid-column: 2 / 4;
+  background: #33AC21;
+}
+
+.box-8{
+  grid-column: 1 / 3;
+  background: #F7B322;
+}
+.box-9{
+  background: #534CD4;
+}
+.box-10{
+  background: #33AC21;
+}
+
+.more{
+  -webkit-user-select: none;
+  user-select: none;
+  margin: auto;
   text-align: center;
+  width: 200px;
+  background-color: #ffe835;
+  border-radius: 5px;
 }
-.sns-container{
-  display: flex;
-  justify-content: center;
-}
-.sns-oya{
-  display: flex;
 
+.movie-none-container{
+  display: none;
 }
-.sns-item{
-  width: 50px;
-  height: 50px;
-  margin:3px;
+.movie-show-container{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: 170px 85px 85px 180px 170px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 5px;
 }
 
 .footer{
+  display: flex;
   width: 100%;
-  height: 180px;
-  background-color: #004B68;
+  height: 90px;
+  background: #004B68;
 }
-
-.footer-thoth{
-  font-size: 50px;
-  color: #ffffff;
-  text-align: center;
-  padding-top: 20px;
-  font-family: Verdana;
+.footer-logo{
+  color: #f0f4f5;
+  font-size: 30px;
   font-weight: bold;
+  margin-left: 10%;
+  margin-top: 10px;
 }
-.footer-mozi1{
-  margin-top:10px;
-  font-size: 12px;
-  color: #ffffff;
-  text-align: center;
+.sns-oya{
+  margin-left: 40%;
+  margin-top: 10px;
+}
+.footer-mozi{
+  font-size: 14px;
+  float: right;
+  color: #f0f4f5;
+  margin-right: 10%;
+  margin-top: 10px;
 }
 
-
-
-@media screen and (min-width: 300px) and (max-width: 1024px) {
-  .body-container{
+@media screen and (min-width: 360px) and (max-width: 1024px){
+  .thothlogo{
+    width: 20%;
+    height: auto;
+  }
+  .container-header{
+    height: auto;
+    text-align: center;
+    display: inline;
     margin-left: 0px;
+    position: sticky;
+    top: 0px;
+
   }
-  .body-title{
-    margin-left: 80px;
+  .container-header{
+    display: block;
+  }
+  .category-rectangle{
+    width: 24%;
+    height: 55px;
+    border-radius: 8px;
+    margin: 3px;
+    text-align: center;
+    line-height: 52px;
+    font-size: 27px;
+    color: #ffffff;
+
+  }
+  .container-category{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+
+
+  }
+
+  .movie-container{
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 50px;
     margin-right: 80px;
+  }
+  .movie-show-container{
+    display: block;
+    margin-top: 5px;
+    margin-left: 25px;
+    margin-right: 40px;
+    margin-top: 5px;
+  }
+  .item {
+    border-radius: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 400px;
+
+  }
+  .more{
+    -webkit-user-select: none;
+    user-select: none;
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    background-color: #ffe835;
+    border-radius: 5px;
     font-size: 20px;
-  }
-  .gift{
-  width: 600px;
-  height: 100px;
-  object-fit: cover;
-  border: 0.9px solid #D6D3D3;
-  margin-left: 160px;
-  }
-  .giftpage{
-    color: #979797;
-    position: relative;
-    top: 32px;
-    left: 10px;
-    margin-left: 170px;
-    font-size: 12px;
-  }
-  .line{
-    margin-right: auto;
   }
 }
